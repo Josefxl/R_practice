@@ -33,6 +33,7 @@ view(TB)
 # Step4 ANALYSIS
 # Tuberculosis mortality rate by year (HIV excluded)
 TB %>% 
+
   group_by(Year) %>%
   summarise(mortality_rate = sum(TB_mortality)) %>%
   arrange(desc(mortality_rate))
